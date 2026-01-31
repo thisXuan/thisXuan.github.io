@@ -17,42 +17,104 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+Hi, I’m Minxuan 👋. You can also call me Michelle ~ 😃 
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+I am a Master’s student in Computational Science and Engineering at Georgia Institute of Technology, with a strong focus on backend systems and AI engineering. I enjoy building production-level systems that connect machine learning models with real-world applications.
 
+I have hands-on industry experience as a Software Engineer Intern at Meituan, Momenta, and the National University of Singapore research institute, where I worked on RAG-based AI agents, high-performance C SDKs, distributed systems, and microservice architectures. My work has supported hundreds of internal users, processed millions of data entries, and delivered measurable performance gains—from 9× speedups with Rust WebAssembly to 90× query latency reductions through system optimization.
+
+Technically, I’m comfortable across the stack, with experience in Python, Java, JavaScript, C/C++, and modern frameworks such as LangChain, PyTorch, Spring Cloud, React, and Vue. I’m particularly interested in combining backend engineering with applied AI—turning models into reliable products.
+
+I’m currently seeking software engineering internship opportunities based in US.  
+
+# 💪 Skills
+```javascript
+const minxuan = {
+  technologies: {
+        frontEnd: {
+            js: ["Vue.js","React.js"],
+        },
+        backEnd: {
+            java: ["Spring Boot", "Spring Cloud"],
+            python: ["Flask","FastApi"],
+            js: ["Node"],
+        },
+        mobileApp: {
+            crossPlatform: ["Flutter"],
+        },
+        devOps: ["Docker🐳", "CI/CD", "Nginx", "GitHub Actions"],
+        cloudServices: {
+            aws: ["EC2", "S3", "RDS"],
+        },
+        databases: ["PostgreSQL", "MongoDB", "SQLite", "MySQL", "Redis"],
+        generativeAI: ["LangChain","RAG"],
+    },
+  description:['I have over one year professional experience and my focus is on full-stack(backend) software development and AI Application.']
+}
+```
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 📝 Publications 
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
-
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
-
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2025.08*: I started my new journey in the United States. 
+- *2025.07*: &nbsp;🎉🎉 I earned dual degrees in Software Engineering and Business Administration from South China University of Technology and graduated as an Outstanding Graduate. 
+- *2025.03*: Started my Software Engineer Internship at Meituan, working on RAG-based AI agents and backend systems.
+- *2025.01*: Joined Momenta as a Software Engineer Intern, working on high-performance C SDKs, cross-platform deployment, and large-scale data processing.
 
 # 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+- *2025.08 - 2027.05 (Expected)*, Georgia Institute of Technology, Master of Science in Computational Science and Engineering. 
+- *2021.09 - 2025.06*, South China University of Technology, Bachelor of Engineering in Software Engineering.
 
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Meituan</div><img src='images/meituan.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+Software Engineer Intern
+
+- Integrated LangChain with a RAG pipeline using hybrid FAISS+BM25 for an AI Agent development, supporting automatic driving platform and offering daily data analysis for product operations team.
+- Implemented the agent search interface with a full-stack architecture (Vue.js+Python Flask+Supabase), and deployed this interface as a MCP tool to make this agent interface easy to deploy and use.
+- Optimized Webviz proto decoding by implementing Rust-based WebAssembly modules executed in Web Workers, achieving up to 9× performance improvement over previous JavaScript solution.
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Momenta</div><img src='images/momenta.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+Software Engineer Intern
+
+- Built a high-performance C SDK with multi-threaded file download (1 GB/s, 1.7 GB memory for 10 GB files) and raw-bag + refresh-topic merging, cutting storage overhead by eliminating redundant full-bag generation.
+- Enabled JavaScript-C cross-compilation and packaged C code as an npm module used in Node.js, ensuring compatibility across Linux, macOS, and user Docker images, serving 500+ colleagues.
+- Resolved topic version mismatches in ROS(Robot Operating System) .bag files by developing an algorithm to accurately identify versions, enabling automated classification of 2 million internal data entries.
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NUSRI</div><img src='images/nus.png' alt="sym" width="200%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+Software Engineer Intern
+
+- Built scalable Microservice architecture using Spring Cloud for a shopping management system, and developed 20+ RESTful APIs. Implemented fuzzy search on store names using Elasticsearch.
+- Optimized system performance by 65% through strategic Redis caching implementation for high-frequency operations. Implemented distributed ID generation using Redis INCR operations to ensure scalability.
+- Built a monitoring dashboard for multidimensional KPI tracking, reducing query latency from 1800 ms to 20 ms(90× faster) through SQL aggregation optimization and indexing.
+</div>
+</div>
+
+# 📝 Projects 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">LoRA</div><img src='images/pockermind.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[PokerMind: LoRA-Tuned LLM for Texas Hold'em Poker](https://github.com/thisXuan/PokerMind-LoRA-Tuned-LLM-for-Texas-Hold-em-Poker)
+
+
+- Applied LoRA fine-tuning to adapt a transformer model to a 110K poker-hand dataset, achieving efficient domain transfer with significantly reduced training cost.
+- Fine-tuned Llama-3-8B for poker decision modeling, achieving 89% loss reduction and improving overall action accuracy from 40.03% to 90.10% and exact match from 26.02% to 75.90%.
+- Developed an interactive Texas Hold’em platform(React+Vite) powered by LoRA-Tuned LLM agents, featuring position-aware prompts and dynamic game-state tracking for human-AI gameplay.
+</div>
+</div>
+
+# 🎖 Honors and Awards
+- **2025.06**: Outstanding Graduate from South China University of Technology.
+- **2024.10**: The Second-Class University Scholarship at South China University of Technology.
+- **2023.12**: Awarded Second Prize (Guangdong Province) in the National Mathematical Modeling Contest.
+- **2023.10**: The Second-Class University Scholarship at South China University of Technology.
+- **2023.04**: First Prize in the Software Design Competition at South China University of Technology.
+- **2022.10**: The Second-Class University Scholarship at South China University of Technology.
