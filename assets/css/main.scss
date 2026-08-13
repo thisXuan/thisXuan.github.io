@@ -197,6 +197,17 @@ h1:before, .anchor:before {
     margin-top: -$scroll_offset;
 }
 
+// Avoid the legacy orange focus ring after mouse/touch navigation while
+// retaining a clear focus indicator for keyboard users.
+a:focus {
+    outline: none;
+}
+
+a:focus-visible {
+    outline: 2px solid $info-color;
+    outline-offset: 3px;
+}
+
 .badge {
     padding: 0.25rem 0.75rem;
     position: absolute;
