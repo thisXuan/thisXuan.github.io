@@ -17,104 +17,119 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi, I’m Minxuan 👋. You can also call me Michelle ~ 😃 
+<section class="intro-panel">
+<p class="intro-panel__eyebrow">Minxuan Jin · M.S. candidate at Georgia Tech</p>
+<h1 class="intro-panel__title">Systems-minded engineer,<br>applied AI builder.</h1>
+<p class="intro-panel__lead">I build dependable infrastructure and intelligent tools that make complex systems easier to use.</p>
+</section>
 
-I am a Master’s student in Computational Science and Engineering at Georgia Institute of Technology, with a strong focus on backend systems and AI engineering. I enjoy building production-level systems that connect machine learning models with real-world applications.
+I am a Master's student in **Computational Science and Engineering** at the [Georgia Institute of Technology](https://www.gatech.edu/). My interests lie at the intersection of **backend systems**, **distributed computing**, and **applied machine learning** — building production-level systems that connect ML models with real-world applications.
 
-I have hands-on industry experience as a Software Engineer Intern at Meituan, Momenta, and the National University of Singapore research institute, where I worked on RAG-based AI agents, high-performance C SDKs, distributed systems, and microservice architectures. My work has supported hundreds of internal users, processed millions of data entries, and delivered measurable performance gains—from 9× speedups with Rust WebAssembly to 90× query latency reductions through system optimization.
+Prior to Georgia Tech, I earned dual degrees in Software Engineering and Business Administration from [South China University of Technology](https://www.scut.edu.cn/en/), graduating as an Outstanding Graduate.
 
-Technically, I’m comfortable across the stack, with experience in Python, Java, JavaScript, C/C++, and modern frameworks such as LangChain, PyTorch, Spring Cloud, React, and Vue. I’m particularly interested in combining backend engineering with applied AI—turning models into reliable products.
+I have industry experience as a Software Engineer Intern at **Amazon Web Services**, **Meituan**, **Momenta**, and the **National University of Singapore Research Institute**, and I am currently seeking 2027 New Grad Software Engineering opportunities.
 
-I’m currently seeking software engineering internship opportunities based in US.  
+# Research Interests
 
-# 💪 Skills
-```javascript
-const minxuan = {
-  technologies: {
-        frontEnd: {
-            js: ["Vue.js","React.js"],
-        },
-        backEnd: {
-            java: ["Spring Boot", "Spring Cloud"],
-            python: ["Flask","FastApi"],
-            js: ["Node"],
-        },
-        mobileApp: {
-            crossPlatform: ["Flutter"],
-        },
-        devOps: ["Docker🐳", "CI/CD", "Nginx", "GitHub Actions"],
-        cloudServices: {
-            aws: ["EC2", "S3", "RDS"],
-        },
-        databases: ["PostgreSQL", "MongoDB", "SQLite", "MySQL", "Redis"],
-        generativeAI: ["LangChain","RAG"],
-    },
-  description:['I have over one year professional experience and my focus is on full-stack(backend) software development and AI Application.']
-}
-```
+<div class="skill-tags">
+<span>Backend Systems</span>
+<span>Applied Machine Learning</span>
+<span>Retrieval-Augmented Generation</span>
+<span>Distributed Systems</span>
+<span>High-Performance Computing</span>
+<span>Microservice Architecture</span>
+</div>
 
-# 🔥 News
-- *2025.08*: I started my new journey in the United States. 
-- *2025.07*: &nbsp;🎉🎉 I earned dual degrees in Software Engineering and Business Administration from South China University of Technology and graduated as an Outstanding Graduate. 
-- *2025.03*: Started my Software Engineer Internship at Meituan, working on RAG-based AI agents and backend systems.
-- *2025.01*: Joined Momenta as a Software Engineer Intern, working on high-performance C SDKs, cross-platform deployment, and large-scale data processing.
+# Technical Skills
 
-# 📖 Educations
-- *2025.08 - 2027.05 (Expected)*, Georgia Institute of Technology, Master of Science in Computational Science and Engineering. 
-- *2021.09 - 2025.06*, South China University of Technology, Bachelor of Engineering in Software Engineering.
+**Languages:** Python, Java, JavaScript/TypeScript, C/C++, SQL, Rust, Dart, Ruby
 
-# 💻 Internships
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Meituan</div><img src='images/meituan.png' alt="sym" width="100%"></div></div>
+**Frameworks & Tools:** LangChain, PyTorch, Scikit-learn, Spring Boot, Spring Cloud, React, Vue.js, CMake, MySQL, PostgreSQL, MongoDB, Redis, Docker, AWS, RocketMQ, Spark, Hadoop
+
+<span class='anchor' id='education'></span>
+# Education
+
+<div class="edu-item">
+<div class="edu-school">Georgia Institute of Technology</div>
+<div class="edu-degree">M.S. in Computational Science and Engineering <span>GPA 3.87 / 4.00</span></div>
+<div class="edu-meta">Atlanta, GA &nbsp;·&nbsp; Aug 2025 – May 2027</div>
+</div>
+
+<div class="edu-item">
+<div class="edu-school">South China University of Technology</div>
+<div class="edu-degree">B.E. in Software Engineering <span>GPA 3.72 / 4.00</span></div>
+<div class="edu-meta">Guangzhou, China &nbsp;·&nbsp; Sep 2021 – Jul 2025</div>
+</div>
+
+<span class='anchor' id='experience'></span>
+# Experience
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">aws</div><img src='images/aws.png' alt="AWS" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-Software Engineer Intern
+**Software Engineer Intern** · Palo Alto, CA · May 2026 – Aug 2026
 
-- Integrated LangChain with a RAG pipeline using hybrid FAISS+BM25 for an AI Agent development, supporting automatic driving platform and offering daily data analysis for product operations team.
-- Implemented the agent search interface with a full-stack architecture (Vue.js+Python Flask+Supabase), and deployed this interface as a MCP tool to make this agent interface easy to deploy and use.
-- Optimized Webviz proto decoding by implementing Rust-based WebAssembly modules executed in Web Workers, achieving up to 9× performance improvement over previous JavaScript solution.
+- Delivered the Python extended client for the Data Plane Proxy Service end-to-end, covering authentication, credential provisioning, exception classification, and CloudWatch metrics; added a Hydra integration-test suite to the pre-production and production pipeline.
+- Built an onboarding agent that generates validated CDK code, tests, and a code review from a single ticket, with status tracking and self-diagnosis. Onboarded **10+ control-plane teams**, reducing onboarding from days to hours.
+- Expanded load-test infrastructure with a Production Mock Test tier for production scenarios including slow downstream responses, thread starvation, high query-argument counts, and large response bodies.
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Momenta</div><img src='images/momenta.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Meituan</div><img src='images/meituan.png' alt="Meituan" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-Software Engineer Intern
+**Software Engineer Intern** · Beijing, China · Apr 2025 – Jun 2025
 
-- Built a high-performance C SDK with multi-threaded file download (1 GB/s, 1.7 GB memory for 10 GB files) and raw-bag + refresh-topic merging, cutting storage overhead by eliminating redundant full-bag generation.
-- Enabled JavaScript-C cross-compilation and packaged C code as an npm module used in Node.js, ensuring compatibility across Linux, macOS, and user Docker images, serving 500+ colleagues.
-- Resolved topic version mismatches in ROS(Robot Operating System) .bag files by developing an algorithm to accurately identify versions, enabling automated classification of 2 million internal data entries.
+- Integrated LangChain with a RAG pipeline using hybrid FAISS+BM25 for an AI Agent development platform, supporting autonomous driving data analysis for product operations teams.
+- Implemented the agent search interface with a full-stack architecture (Vue.js + Python Flask + Supabase), and deployed it as an MCP tool for easy integration.
+- Optimized Webviz proto decoding by implementing Rust-based WebAssembly modules in Web Workers, achieving up to **9× performance improvement** over the previous JavaScript solution.
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NUSRI</div><img src='images/nus.png' alt="sym" width="200%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Momenta</div><img src='images/momenta.png' alt="Momenta" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-Software Engineer Intern
+**Software Engineer Intern** · Beijing, China · Jan 2025 – Mar 2025
 
-- Built scalable Microservice architecture using Spring Cloud for a shopping management system, and developed 20+ RESTful APIs. Implemented fuzzy search on store names using Elasticsearch.
-- Optimized system performance by 65% through strategic Redis caching implementation for high-frequency operations. Implemented distributed ID generation using Redis INCR operations to ensure scalability.
-- Built a monitoring dashboard for multidimensional KPI tracking, reducing query latency from 1800 ms to 20 ms(90× faster) through SQL aggregation optimization and indexing.
+- Built a high-performance C SDK with multi-threaded file download (1 GB/s, 1.7 GB memory for 10 GB files) and raw-bag + refresh-topic merging, eliminating redundant full-bag generation.
+- Enabled JavaScript-C cross-compilation and packaged C code as an npm module, ensuring compatibility across Linux, macOS, and Docker, serving 500+ colleagues.
+- Resolved topic version mismatches in ROS .bag files by developing an algorithm to accurately identify versions, enabling automated classification of **2 million** internal data entries.
 </div>
 </div>
 
-# 📝 Projects 
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">LoRA</div><img src='images/pockermind.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NUSRI</div><img src='images/nus.png' alt="NUS Research Institute" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[PokerMind: LoRA-Tuned LLM for Texas Hold'em Poker](https://github.com/thisXuan/PokerMind-LoRA-Tuned-LLM-for-Texas-Hold-em-Poker)
+**Software Engineer Intern** · Chongqing, China · Sep 2024 – Dec 2024
 
+- Built scalable microservice architecture using Spring Cloud for a shopping management system, developing 20+ RESTful APIs with Elasticsearch-powered fuzzy search.
+- Optimized system performance by **65%** through strategic Redis caching for high-frequency operations and distributed ID generation.
+- Built a monitoring dashboard for multidimensional KPI tracking, reducing query latency from 1800 ms to 20 ms (**90× faster**) through SQL aggregation optimization and indexing.
+</div>
+</div>
+
+<span class='anchor' id='projects'></span>
+# Projects
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">LoRA</div><img src='images/pockermind.png' alt="PokerMind" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**[PokerMind: LoRA-Tuned LLM for Texas Hold'em Poker](https://github.com/thisXuan/PokerMind-LoRA-Tuned-LLM-for-Texas-Hold-em-Poker)**
 
 - Applied LoRA fine-tuning to adapt a transformer model to a 110K poker-hand dataset, achieving efficient domain transfer with significantly reduced training cost.
-- Fine-tuned Llama-3-8B for poker decision modeling, achieving 89% loss reduction and improving overall action accuracy from 40.03% to 90.10% and exact match from 26.02% to 75.90%.
-- Developed an interactive Texas Hold’em platform(React+Vite) powered by LoRA-Tuned LLM agents, featuring position-aware prompts and dynamic game-state tracking for human-AI gameplay.
+- Fine-tuned Llama-3-8B for poker decision modeling, achieving 89% loss reduction and improving action accuracy from 40.03% to **90.10%**.
+- Developed an interactive Texas Hold'em platform (React + Vite) powered by LoRA-tuned LLM agents with position-aware prompts and dynamic game-state tracking.
 </div>
 </div>
 
-# 🎖 Honors and Awards
-- **2025.06**: Outstanding Graduate from South China University of Technology.
-- **2024.10**: The Second-Class University Scholarship at South China University of Technology.
-- **2023.12**: Awarded Second Prize (Guangdong Province) in the National Mathematical Modeling Contest.
-- **2023.10**: The Second-Class University Scholarship at South China University of Technology.
-- **2023.04**: First Prize in the Software Design Competition at South China University of Technology.
-- **2022.10**: The Second-Class University Scholarship at South China University of Technology.
+<span class='anchor' id='honors'></span>
+# Honors & Awards
+
+<ul class="honors-list">
+<li><strong>2025.06</strong> — Outstanding Graduate, South China University of Technology</li>
+<li><strong>2024.10</strong> — Second-Class University Scholarship, SCUT</li>
+<li><strong>2023.12</strong> — Second Prize (Guangdong Province), National Mathematical Modeling Contest</li>
+<li><strong>2023.10</strong> — Second-Class University Scholarship, SCUT</li>
+<li><strong>2023.04</strong> — First Prize, Software Design Competition, SCUT</li>
+<li><strong>2022.10</strong> — Second-Class University Scholarship, SCUT</li>
+</ul>

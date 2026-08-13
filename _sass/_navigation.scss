@@ -179,13 +179,16 @@
 
   a {
     display: block;
-    margin: 0 1rem;
+    margin: 0 0.75rem;
     padding: 0.5rem 0;
     color: $masthead-link-color;
     text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    letter-spacing: 0.01em;
 
     &:hover {
-      color: $masthead-link-color-hover;
+      color: $info-color;
     }
   }
 
@@ -231,14 +234,14 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 4px;
-        background: mix(#fff, $primary-color, 50%);
+        height: 2px;
+        background: $info-color;
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
         -webkit-transform: scaleX(0);
             -ms-transform: scaleX(0);
-                transform: scaleX(0); /* hide*/
+                transform: scaleX(0);
       }
 
       &:hover:before {

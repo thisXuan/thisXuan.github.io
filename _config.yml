@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Minxuan Jin"
-description              : "Actively seeking SDE internship positions|Ex-intern@Meituan, Momenta, National University of Singapore"
+description              : "M.S. student in Computational Science & Engineering at Georgia Tech. Research interests in backend systems, distributed computing, and applied machine learning."
 repository               : "thisXuan/thisXuan.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,12 +23,12 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Minxuan Jin"
   avatar           : "images/profile.jpg"
-  bio              : "Georgia Institute of Technology"
-  location         : "Georgia, United States"
+  bio              : "CS @ GaTech | SDE Intern @ Amazon"
+  location         : "Atlanta, Georgia"
   employer         :
   pubmed           : 
   googlescholar    : 
-  email            : "xuankimcsc@gmail.com"
+  email            : "mxjin2003@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

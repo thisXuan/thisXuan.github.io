@@ -43,21 +43,40 @@
 .paper-box {
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
-    padding: 2em 0 2em 0;
-    
+    border: 1px solid $border-color;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: $box-shadow;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        border-color: mix($info-color, #fff, 35%);
+        box-shadow: 0 14px 30px rgba(26, 54, 93, 0.12);
+    }
 
     .paper-box-image{
         justify-content: center;
         display: flex;
         width: 100%;
         order: 2;
+
+        > div {
+            position: relative;
+            width: 100%;
+        }
+
         img {
-            max-width: 400px;
-            box-shadow: 3px 3px 6px #888;
+            max-width: 100%;
+            width: 100%;
+            border-radius: $border-radius;
+            box-shadow: none;
+            border: 1px solid $border-color;
             object-fit: cover;
         }
     }
@@ -65,29 +84,110 @@
     .paper-box-text{
         max-width: 100%;
         order: 1;
+
+        p:first-child {
+            font-weight: 600;
+            color: $primary-color;
+            margin-bottom: 0.75em;
+        }
     }
     
     @include breakpoint($medium) {
         .paper-box-image{
             justify-content: left;
-            min-width: 200px;
-            max-width: 40%;
+            min-width: 180px;
+            max-width: 28%;
             order: 1;
         }
         
         .paper-box-text{
             justify-content: left;
-            padding-left: 2em;
-            max-width: 60%;
+            padding-left: 1.75em;
+            max-width: 72%;
             order: 2;
         }
-
     }
-
-
 }
 
-$scroll_offset : 2em;
+.intro-panel {
+    position: relative;
+    overflow: hidden;
+    margin: -0.5em -0.5em 2.75em;
+    padding: 2.5em 2em;
+    color: #f8fafc;
+    background: linear-gradient(135deg, #102a43 0%, #1a4b70 58%, #216c73 100%);
+    border-radius: 16px;
+    box-shadow: 0 18px 35px rgba(16, 42, 67, 0.20);
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -6em;
+        bottom: -7em;
+        width: 17em;
+        height: 17em;
+        border: 1px solid rgba(#fff, 0.22);
+        border-radius: 50%;
+        box-shadow: 0 0 0 2.5em rgba(#fff, 0.05), 0 0 0 5em rgba(#fff, 0.04);
+    }
+
+    &__eyebrow {
+        margin: 0 0 0.85em;
+        color: #9ee6d8;
+        font-family: $monospace;
+        font-size: 0.74em !important;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        color: #fff;
+        font-size: 2.1em !important;
+        line-height: 1.08;
+        letter-spacing: -0.035em;
+    }
+
+    &__lead {
+        position: relative;
+        z-index: 1;
+        max-width: 34em;
+        margin: 1.1em 0 0;
+        color: #d9edf0;
+        font-size: 1.05em !important;
+    }
+
+    @include breakpoint($medium) {
+        padding: 3.25em;
+        &__title { font-size: 2.7em !important; }
+    }
+}
+
+.availability-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55em;
+    margin: 0.5em 0 1em;
+    padding: 0.45em 0.8em;
+    color: #176b5b;
+    background: #e5f7f2;
+    border-radius: 999px;
+    font-size: 0.88em;
+    font-weight: 600;
+
+    span {
+        width: 0.55em;
+        height: 0.55em;
+        background: #28a58b;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(#28a58b, 0.16);
+    }
+}
+
+$scroll_offset : 5em;
 h1:before, .anchor:before { 
     content: ''; 
     display: block; 
@@ -98,12 +198,165 @@ h1:before, .anchor:before {
 }
 
 .badge {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0.25rem 0.75rem;
     position: absolute;
-    margin-top: .5em;
-    margin-left: -.5em;
+    top: 0.75em;
+    left: 0.75em;
     color: white;
-    background-color: #00369f;
-    font-size: .8em;
+    background-color: $primary-color;
+    font-family: $sans-serif;
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.section-intro {
+    color: mix($text-color, #fff, 80%);
+    font-size: 0.95em;
+    margin-bottom: 1.5em;
+    line-height: 1.7;
+}
+
+.news-list {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        padding: 0.65em 0;
+        border-bottom: 1px solid $border-color;
+        line-height: 1.6;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        em {
+            color: $info-color;
+            font-style: normal;
+            font-weight: 600;
+            font-family: $monospace;
+            font-size: 0.9em;
+            margin-right: 0.5em;
+        }
+    }
+}
+
+.edu-item {
+    margin-bottom: 1.5em;
+    padding-left: 1em;
+    border-left: 3px solid $info-color;
+
+    .edu-school {
+        margin-bottom: 0.25em;
+        color: $primary-color;
+        font-size: 1em;
+        font-weight: 700;
+    }
+
+    .edu-degree {
+        margin-bottom: 0.25em;
+
+        span {
+            margin-left: 0.4em;
+            font-family: $monospace;
+            font-size: 0.62em;
+            font-weight: 500;
+        }
+    }
+
+    .edu-meta {
+        color: mix($text-color, #fff, 70%);
+        font-size: 0.92em;
+    }
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin: 1em 0;
+
+    span {
+        display: inline-block;
+        padding: 0.35em 0.85em;
+        background: #fff;
+        border: 1px solid $border-color;
+        border-radius: 999px;
+        font-size: 0.85em;
+        color: $text-color;
+        transition: $global-transition;
+
+        &:hover {
+            border-color: $info-color;
+            color: $info-color;
+        }
+    }
+}
+
+.honors-list {
+    li {
+        margin-bottom: 0.65em;
+        line-height: 1.6;
+    }
+}
+
+// Keep the space before every main section consistent, regardless of its content.
+.page__content > h1 {
+    margin-top: 1.5em;
+    margin-bottom: 0.55em;
+}
+
+// The first top-level heading follows the introduction rather than another heading.
+.page__content > h1:first-of-type {
+    margin-top: 1.5em;
+}
+
+.featured-experience {
+    border-color: #b7ddd7;
+    background: linear-gradient(105deg, #fff 60%, #f0fbf8 100%);
+}
+
+.company-mark {
+    display: grid;
+    min-height: 120px;
+    place-items: center;
+    border-radius: 10px;
+    color: #fff;
+    font-family: $sans-serif;
+    font-size: 2.3em;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+
+    &--aws {
+        padding-bottom: 0.17em;
+        color: #161e2d;
+        background: #fff;
+        border: 1px solid $border-color;
+        text-decoration: underline;
+        text-decoration-color: #ff9900;
+        text-decoration-thickness: 0.13em;
+        text-underline-offset: 0.22em;
+    }
+}
+
+.project-card {
+    margin: 1.25em 0 1.5em;
+    padding: 1.5em;
+    border: 1px solid $border-color;
+    border-radius: 14px;
+    background: #f8fafc;
+
+    h3 { margin-top: 0.35em; }
+    ul { margin-bottom: 0; }
+
+    &__meta {
+        color: $info-color;
+        font-family: $monospace;
+        font-size: 0.73em;
+        font-weight: 500;
+        letter-spacing: 0.025em;
+        text-transform: uppercase;
+    }
 }
