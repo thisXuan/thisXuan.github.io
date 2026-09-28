@@ -84,9 +84,20 @@ Lead paragraph.
     ).toHaveAttribute('id', 'travel-geography');
   });
 
-  it('renders section navigation and self-links for the real about markdown', () => {
-    const sectionTitles = getActualSectionTitles(aboutMarkdown);
-    const { container } = render(<AboutContent markdown={aboutMarkdown} />);
+  it('renders section navigation and self-links', () => {
+    const markdown = `# Intro
+
+Lead paragraph.
+
+# Some History
+
+- Built a thing.
+
+# I Like
+
+- Museums.`;
+    const sectionTitles = getActualSectionTitles(markdown);
+    const { container } = render(<AboutContent markdown={markdown} />);
     const nav = screen.getByRole('navigation', { name: 'About sections' });
 
     expect(within(nav).getAllByRole('link')).toHaveLength(sectionTitles.length);
@@ -106,48 +117,64 @@ Lead paragraph.
     }
   });
 
-  it('renders matching hash links and heading ids into static markup', () => {
+  it('renders the real intro-only about copy without section navigation', () => {
     const html = renderToStaticMarkup(
       <AboutContent markdown={aboutMarkdown} />,
     );
 
-    expect(html).toContain('href="#some-history"');
-    expect(html).toContain('id="some-history"');
-    expect(html).toContain('href="#travel-geography"');
-    expect(html).toContain('id="travel-geography"');
+    expect(html).toContain('class="about-intro"');
+    expect(html).toContain('museums and historical sites');
+    expect(html).not.toContain('about-section-nav');
+    expect(html).not.toContain('<h2');
   });
 
   it('supports same-page hash navigation from section links', async () => {
     window.history.replaceState({}, '', '/about/');
 
-    render(<AboutContent markdown={aboutMarkdown} />);
+    render(
+      <AboutContent
+        markdown={`# Intro
+
+Lead paragraph.
+
+# Some History
+
+- Built a thing.
+
+# Travel / Geography
+
+- Went somewhere.`}
+      />,
+    );
 
     const nav = screen.getByRole('navigation', { name: 'About sections' });
     const navLink = within(nav).getByRole('link', {
-      name: 'Travel / Geography',
+      name: 'Some History',
     });
 
     navLink.click();
+
+    await waitFor(() => {
+      expect(window.location.hash).toBe('#some-history');
+    });
+    expect(document.querySelector(window.location.hash)).toHaveTextContent(
+      'Some History',
+    );
+
+    const heading = screen.getByRole('heading', {
+      name: 'Travel / Geography',
+    });
+    const permalink = within(heading).getByRole('link', {
+      name: 'Travel / Geography',
+    });
+
+    permalink.click();
 
     await waitFor(() => {
       expect(window.location.hash).toBe('#travel-geography');
     });
     expect(document.querySelector(window.location.hash)).toHaveTextContent(
       'Travel / Geography',
-    );
-
-    const heading = screen.getByRole('heading', { name: 'Fun Facts' });
-    const permalink = within(heading).getByRole('link', {
-      name: 'Fun Facts',
-    });
-
-    permalink.click();
-
-    await waitFor(() => {
-      expect(window.location.hash).toBe('#fun-facts');
-    });
-    expect(document.querySelector(window.location.hash)).toHaveTextContent(
-      'Fun Facts',
     );
   });
 });

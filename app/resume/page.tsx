@@ -1,14 +1,11 @@
 import type { Metadata } from 'next';
 
-import Courses from '@/components/Resume/Courses';
 import Education from '@/components/Resume/Education';
 import Experience from '@/components/Resume/Experience';
-import References from '@/components/Resume/References';
 import ResumeNav from '@/components/Resume/ResumeNav';
 import Skills from '@/components/Resume/Skills';
 import PageWrapper from '@/components/Template/PageWrapper';
 import profile from '@/data/profile.json';
-import courses from '@/data/resume/courses';
 import degrees from '@/data/resume/degrees';
 import { categories, skills } from '@/data/resume/skills';
 import work from '@/data/resume/work';
@@ -17,7 +14,7 @@ import { AUTHOR_NAME, SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Resume',
-  description: `${AUTHOR_NAME}'s Resume. OpenAI, Promptfoo, Smile ID, Arthena, Matroid, Stanford ICME, YC alum.`,
+  description: `${AUTHOR_NAME}'s resume: Georgia Tech, AWS, Meituan, Momenta, distributed systems, backend engineering, and applied AI.`,
   path: '/resume/',
 });
 
@@ -28,12 +25,10 @@ export default function ResumePage() {
         <header className="resume-header">
           <h1 className="resume-title">Resume</h1>
           <p className="resume-summary">
-            Engineering leader with 15+ years building products across AI,
-            security, and infrastructure. I&apos;m currently a Member of the
-            Technical Staff at OpenAI, working on Promptfoo and Codex Security.
-            I help secure AI systems and use AI to find software
-            vulnerabilities. I co-founded Promptfoo before it joined OpenAI in
-            2026. Stanford MS, YC alum, previously VP Engineering.
+            Software engineer and Georgia Tech M.S. student focused on backend
+            systems, distributed infrastructure, and applied AI. Experience
+            includes production engineering at AWS, Meituan, Momenta, and the
+            National University of Singapore Research Institute.
           </p>
           {/* Print-only, but real markup rather than CSS `content`, so it is
               selectable, linkable, and reads from the shared profile. The
@@ -43,7 +38,7 @@ export default function ResumePage() {
             <span aria-hidden="true"> · </span>
             <a href={`mailto:${profile.email}`}>{profile.email}</a>
             <span aria-hidden="true"> · </span>
-            <a href="https://github.com/mldangelo">github.com/mldangelo</a>
+            <a href={profile.github}>github.com/thisXuan</a>
           </address>
         </header>
 
@@ -60,14 +55,6 @@ export default function ResumePage() {
 
           <section id="skills" className="resume-section">
             <Skills skills={skills} categories={categories} />
-          </section>
-
-          <section id="courses" className="resume-section">
-            <Courses data={courses} />
-          </section>
-
-          <section id="references" className="resume-section">
-            <References />
           </section>
         </div>
       </section>

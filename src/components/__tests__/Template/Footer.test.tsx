@@ -14,9 +14,11 @@ describe('Footer', () => {
   it('displays the name and role', () => {
     render(<Footer />);
 
-    expect(screen.getByText("Michael D'Angelo")).toBeInTheDocument();
+    expect(screen.getByText('Minxuan Jin')).toBeInTheDocument();
     expect(
-      screen.getByText('Member of the Technical Staff at OpenAI'),
+      screen.getByText(
+        'M.S. Student in Computational Science and Engineering at Georgia Tech',
+      ),
     ).toBeInTheDocument();
   });
 
@@ -46,9 +48,7 @@ describe('Footer', () => {
       'href',
       '/resume',
     );
-    // Labelled "Archive" to match the nav and the page's own heading;
-    // the route stays /projects.
-    expect(screen.getByRole('link', { name: /archive/i })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /projects/i })).toHaveAttribute(
       'href',
       '/projects',
     );

@@ -14,24 +14,31 @@ export default function Hero() {
           </h1>
 
           <p className="hero-tagline">
-            I&apos;m a {profile.role} at{' '}
-            <a href="https://openai.com" className="hero-highlight">
+            I&apos;m an M.S. student in Computational Science and Engineering at{' '}
+            <a href="https://www.gatech.edu" className="hero-highlight">
               {profile.employer}
             </a>
-            , working on{' '}
-            <a href="https://promptfoo.dev" className="hero-highlight">
-              Promptfoo
-            </a>{' '}
-            and{' '}
+            , focused on backend systems, distributed infrastructure, and AI.
+            I&apos;ve built production software at{' '}
+            <a href="https://aws.amazon.com" className="hero-highlight">
+              AWS
+            </a>
+            ,{' '}
             <a
-              href="https://openai.com/index/codex-security-now-in-research-preview/"
+              href="https://www.meituan.com/en-US/about-us"
               className="hero-highlight"
             >
-              Codex Security
+              Meituan
             </a>
-            . I help secure AI systems and use AI to find software
-            vulnerabilities. I co-founded Promptfoo before it joined OpenAI in
-            2026.
+            ,{' '}
+            <a href="https://www.momenta.cn/en/" className="hero-highlight">
+              Momenta
+            </a>
+            , and the{' '}
+            <a href="https://nus.edu.sg/" className="hero-highlight">
+              National University of Singapore Research Institute
+            </a>
+            .
           </p>
 
           <div className="hero-cta">

@@ -2,8 +2,7 @@ export interface Project {
   title: string;
   subtitle?: string;
   link?: string;
-  image: string;
-  date: string;
+  date?: string;
   desc: string;
   tech?: string[];
   featured?: boolean;
@@ -11,40 +10,20 @@ export interface Project {
 
 const data: Project[] = [
   {
-    title: 'Nearest Dollar',
-    subtitle: 'BVP Hackathon',
-    image: '/images/projects/nearestdollar.jpg',
-    date: '2015-11-20',
-    desc: 'Connected to bank accounts to round up purchases and donate spare change to charity.',
-    tech: ['React', 'Node.js', 'Plaid API', 'MongoDB'],
+    title: 'Community Review',
+    subtitle: 'Yelp-like local services platform',
+    link: 'https://github.com/thisXuan/community_review',
+    desc: 'Redis-backed local-services platform with token authentication, social features, a high-concurrency flash-sale workflow, and resilient cache strategies.',
+    tech: ['Java', 'Spring Boot', 'MyBatis-Plus', 'MySQL', 'Redis', 'RabbitMQ'],
     featured: true,
   },
   {
-    title: 'Harvest',
-    subtitle: '3rd place at Techcrunch Disrupt SF',
-    link: 'https://devpost.com/software/harvest',
-    image: '/images/projects/harvest.jpg',
-    date: '2015-09-20',
-    desc: 'Low-cost crop monitoring to catch irrigation leaks and nutrient deficiencies.',
-    tech: ['Python', 'Arduino', 'Computer Vision', 'AWS'],
+    title: 'PokerMind',
+    subtitle: "LLM-powered Texas Hold'em agent",
+    link: 'https://github.com/Neptunian-shushu/PokerMind-LoRA-Tuned-LLM-for-Texas-Hold-em-Poker',
+    desc: 'Fine-tuned Llama 3 8B with LoRA on 110K poker hands, improving action accuracy from 40.03% to 90.10%, and built an interactive human-AI gameplay platform.',
+    tech: ['PyTorch', 'LoRA', 'FastAPI', 'React', 'Vite'],
     featured: true,
-  },
-  {
-    title: 'Space Potato',
-    subtitle: 'Kickstarter-funded weather balloon',
-    link: 'http://www.spacepotato.org',
-    image: '/images/projects/spacepotato.jpg',
-    date: '2015-06-28',
-    desc: 'Potato-powered weather balloon with cameras. Photos published in a coffee table book.',
-    tech: ['Hardware', 'GPS', 'Photography'],
-  },
-  {
-    title: 'Cat Detector',
-    subtitle: 'CNN for cat breed classification',
-    image: '/images/projects/catdetector.jpg',
-    date: '2015-05-15',
-    desc: 'Classified 60,000+ cats across 80 breeds before server costs shut it down.',
-    tech: ['Python', 'TensorFlow', 'CNN', 'AWS'],
   },
 ];
 

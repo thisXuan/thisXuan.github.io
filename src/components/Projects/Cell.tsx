@@ -1,30 +1,18 @@
 import dayjs from 'dayjs';
-import Image from 'next/image';
 
 import type { Project } from '@/data/projects';
-import { PROJECT_IMAGE } from '@/lib/utils';
 
 interface CellProps {
   data: Project;
 }
 
 export default function Cell({ data }: CellProps) {
-  const { title, subtitle, link, image, date, desc, tech, featured } = data;
+  const { title, subtitle, link, date, desc, tech, featured } = data;
 
   const hasLink = Boolean(link);
 
   const cardContent = (
     <>
-      <div className="project-card-image">
-        <Image
-          src={image}
-          alt=""
-          width={PROJECT_IMAGE.width}
-          height={PROJECT_IMAGE.height}
-          sizes="(max-width: 600px) 100vw, 50vw"
-        />
-      </div>
-
       <div className="project-card-content">
         <header className="project-card-header">
           <h3 className="project-card-title">{title}</h3>
@@ -48,9 +36,11 @@ export default function Cell({ data }: CellProps) {
           </div>
         )}
 
-        <time className="project-card-date" dateTime={date}>
-          {dayjs(date).format('YYYY')}
-        </time>
+        {date && (
+          <time className="project-card-date" dateTime={date}>
+            {dayjs(date).format('YYYY')}
+          </time>
+        )}
       </div>
     </>
   );
