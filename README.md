@@ -1,12 +1,12 @@
-# Michael D'Angelo: Personal Site
+# Minxuan Jin: Personal Site
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/mldangelo/personal-site/node.js.yml?branch=main)](https://github.com/mldangelo/personal-site/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/thisXuan/thisXuan.github.io/node.js.yml?branch=main)](https://github.com/thisXuan/thisXuan.github.io/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/mldangelo/personal-site?style=social)](https://github.com/mldangelo/personal-site/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/mldangelo/personal-site?style=social)](https://github.com/mldangelo/personal-site/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/thisXuan/thisXuan.github.io?style=social)](https://github.com/thisXuan/thisXuan.github.io/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/thisXuan/thisXuan.github.io?style=social)](https://github.com/thisXuan/thisXuan.github.io/network/members)
 
-The source for [mldangelo.com](https://mldangelo.com), a portfolio, résumé,
-project archive, and writing site built with
+The source for [thisxuan.github.io](https://thisxuan.github.io/), a portfolio,
+résumé, and project archive built with
 [Next.js](https://nextjs.org/), [React](https://react.dev/),
 [TypeScript](https://www.typescriptlang.org/), and
 [Tailwind CSS](https://tailwindcss.com/).
@@ -14,13 +14,13 @@ project archive, and writing site built with
 The architecture is reusable and MIT licensed. The content and visual design
 are personal, so a fork needs a full rebrand.
 
-**[Visit the live site →](https://mldangelo.com)**
+**[Visit the live site →](https://thisxuan.github.io/)**
 
 ## What is here
 
 - A statically exported Next.js 16 site deployed to GitHub Pages.
 - A responsive light/dark design system built from semantic CSS tokens.
-- Markdown writing with drafts, RSS, and page metadata.
+- Static project and résumé data with route-level metadata.
 - A filterable résumé that still prints in full.
 - Tests for components, content, metadata, and the final static export.
 
@@ -42,8 +42,8 @@ With [GitHub CLI](https://cli.github.com/) and
 [nvm](https://github.com/nvm-sh/nvm) installed:
 
 ```bash
-gh repo fork mldangelo/personal-site --clone
-cd personal-site
+gh repo clone thisXuan/thisXuan.github.io
+cd thisXuan.github.io
 nvm install
 npm ci
 npm run dev
