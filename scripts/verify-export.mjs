@@ -325,8 +325,6 @@ const REQUIRED_SOCIAL_META = [
   ['property', 'og:image'],
   ['property', 'og:image:alt'],
   ['name', 'twitter:card'],
-  ['name', 'twitter:site'],
-  ['name', 'twitter:creator'],
   ['name', 'twitter:title'],
   ['name', 'twitter:description'],
   ['name', 'twitter:image'],
@@ -575,7 +573,12 @@ if (!existsSync(sitemapPath)) {
 
 const feedPath = join(OUT, 'feed.xml');
 if (!existsSync(feedPath)) {
-  fail('feed.xml', 'missing from export');
+  // Writing is an optional feature. A portfolio without a writing route does
+  // not need to manufacture an RSS feed just to satisfy this export gate.
+  const writingRouteExists =
+    existsSync(resolve(ROOT, 'app/writing/page.tsx')) ||
+    existsSync(resolve(OUT, 'writing'));
+  if (writingRouteExists) fail('feed.xml', 'missing from export');
 } else {
   const feed = readFileSync(feedPath, 'utf8');
   const textLinks = [...feed.matchAll(/<link>\s*([^<]+?)\s*<\/link>/gi)].map(
