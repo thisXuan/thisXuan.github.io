@@ -1,17 +1,14 @@
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { SchemaGraph } from '@/components/Schema';
 import Hero from '@/components/Template/Hero';
 import PageWrapper from '@/components/Template/PageWrapper';
+import projects from '@/data/projects';
 import { HOME_URL, profilePageNode } from '@/lib/schema';
-import {
-  AUTHOR_NAME,
-  formatDate,
-  SITE_DESCRIPTION,
-  SITE_URL,
-} from '@/lib/utils';
-import { getWritingItems } from '@/lib/writing';
+import { AUTHOR_NAME, SITE_DESCRIPTION, SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
@@ -21,9 +18,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const recentWriting = getWritingItems()
-    .filter((item) => item.date)
-    .slice(0, 3);
+  const selectedProjects = projects.filter((project) => project.featured);
 
   return (
     <PageWrapper mainClassName="page-main--hero">
@@ -31,49 +26,37 @@ export default function HomePage() {
         nodes={[profilePageNode({ url: HOME_URL, name: AUTHOR_NAME })]}
       />
       <Hero />
-      <section className="home-writing" aria-labelledby="home-writing-title">
+      <section className="home-writing" aria-labelledby="home-projects-title">
         <div className="home-writing-header">
           <div>
-            <span className="home-section-kicker">Recent signal</span>
-            <h2 id="home-writing-title">Latest writing</h2>
+            <span className="home-section-kicker">Selected work</span>
+            <h2 id="home-projects-title">Featured projects</h2>
           </div>
-          <Link href="/writing/" className="home-writing-all">
+          <Link href="/projects/" className="home-writing-all">
             View all
           </Link>
         </div>
         <div className="home-writing-list">
-          {recentWriting.map((item) => {
-            const content = (
-              <>
-                <span className="home-writing-meta">
-                  {formatDate(item.date)} · {item.source}
-                </span>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </>
-            );
-
-            return item.isExternal ? (
-              <a
-                key={item.url}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="home-writing-item"
-              >
-                {content}
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>
-            ) : (
-              <Link
-                key={item.url}
-                href={item.url}
-                className="home-writing-item"
-              >
-                {content}
-              </Link>
-            );
-          })}
+          {selectedProjects.map((project) => (
+            <article key={project.title} className="home-writing-item">
+              <span className="home-writing-meta">{project.subtitle}</span>
+              <div className="home-project-title-row">
+                <h3>{project.title}</h3>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    className="home-project-github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.title} on GitHub (opens in new tab)`}
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                )}
+              </div>
+              <p>{project.desc}</p>
+            </article>
+          ))}
         </div>
       </section>
     </PageWrapper>

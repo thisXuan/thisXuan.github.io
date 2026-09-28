@@ -25,20 +25,13 @@ describe('createHeadingId', () => {
     expect(createHeadingId('!!!')).toBe('section');
   });
 
-  it('keeps the real about section ids stable', () => {
+  it('does not fabricate anchors for the intro-only about page', () => {
     expect(
       getAboutSectionTitles(aboutMarkdown).map((title) => [
         title,
         createHeadingId(title),
       ]),
-    ).toEqual([
-      ['Some History', 'some-history'],
-      ['I Like', 'i-like'],
-      ['Travel / Geography', 'travel-geography'],
-      ['Fun Facts', 'fun-facts'],
-      ['I Dream Of', 'i-dream-of'],
-      ['Websites from People I Admire', 'websites-from-people-i-admire'],
-    ]);
+    ).toEqual([]);
   });
 });
 

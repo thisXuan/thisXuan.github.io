@@ -19,19 +19,28 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   keywords: [
     AUTHOR_NAME,
-    'OpenAI',
-    'Promptfoo',
-    'Codex Security',
-    'AI security',
-    'application security',
-    'LLM security',
+    'Georgia Tech',
+    'software engineer',
+    'backend engineering',
+    'distributed systems',
+    'cloud infrastructure',
+    'AI agents',
+    'RAG',
     'machine learning',
-    'startup founder',
-    'YC',
   ],
   authors: [{ name: AUTHOR_NAME }],
   creator: AUTHOR_NAME,
   metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: [
+      {
+        url: '/images/favicon/favicon.svg?v=mj',
+        type: 'image/svg+xml',
+      },
+    ],
+    shortcut: '/images/favicon/favicon.svg?v=mj',
+  },
+  manifest: '/images/favicon/manifest.json',
   // The root is the origin of the share metadata, so it uses the same shared
   // blocks as every other page. Hand-writing them here is what left the
   // homepage advertising a different og:image:alt from the rest of the site

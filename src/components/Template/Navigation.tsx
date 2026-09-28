@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import profile from '@/data/profile.json';
 import routes from '@/data/routes';
 import { isActiveRoute } from '@/lib/routes';
 import { AUTHOR_NAME } from '@/lib/utils';
@@ -16,7 +17,7 @@ export default function Navigation() {
   return (
     <header className="site-header">
       <Link href="/" className="site-logo" aria-label={`${AUTHOR_NAME} — home`}>
-        <span className="logo-text">MD</span>
+        <span className="logo-text">{profile.initials}</span>
       </Link>
 
       <nav className="nav-links" aria-label="Primary">

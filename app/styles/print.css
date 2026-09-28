@@ -237,4 +237,8 @@
     max-width: 100% !important;
     filter: grayscale(1) !important;
   }
+
+  .theme-portrait img {
+    filter: none !important;
+  }
 }

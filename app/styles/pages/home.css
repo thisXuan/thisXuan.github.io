@@ -133,39 +133,10 @@
   height: auto;
 }
 
-/* The source portrait sits on a white field. Multiply drops that field
-   into the paper so the frame holds a photograph, not a white tile. */
+/* Preserve the source portrait's original colour in every theme. */
 .hero-portrait img {
-  filter: grayscale(1) contrast(1.05);
-  mix-blend-mode: multiply;
-  transition: filter var(--duration-normal) var(--ease-out);
-}
-
-.hero-portrait:hover img {
-  filter: grayscale(0) contrast(1);
-}
-
-/* On ink the portrait must not out-shout the name, so the white
-   field is pulled well down rather than multiplied away. */
-[data-theme='dark'] .hero-portrait img {
   mix-blend-mode: normal;
-  filter: grayscale(1) brightness(0.66) contrast(1.08);
-}
-
-[data-theme='dark'] .hero-portrait:hover img {
-  filter: grayscale(0) brightness(0.78) contrast(1);
-}
-
-/* Touch users cannot reveal the portrait with hover. Keep it developed in
-   both themes, after the dark-theme rules so the cascade cannot re-grey it. */
-@media (hover: none) {
-  .hero-portrait img {
-    filter: none;
-  }
-
-  [data-theme='dark'] .hero-portrait img {
-    filter: brightness(0.78) contrast(1);
-  }
+  filter: none;
 }
 
 /* ========================================
@@ -321,6 +292,27 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-snug);
   color: var(--color-fg-bold);
+}
+
+.home-project-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.home-project-github {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-fg-light);
+  background-image: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.home-project-github:hover,
+.home-project-github:focus-visible {
+  color: var(--color-accent);
 }
 
 .home-writing-item:hover h3,

@@ -15,31 +15,39 @@ describe('Hero', () => {
     render(<Hero />);
 
     const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toHaveTextContent("Michael D'Angelo");
+    expect(heading).toHaveTextContent('Minxuan Jin');
   });
 
-  it('describes the current work and Promptfoo joining OpenAI', () => {
+  it('describes the current education and engineering focus', () => {
     const { container } = render(<Hero />);
 
-    const openAiLink = screen.getByRole('link', { name: /openai/i });
-    expect(openAiLink).toHaveAttribute('href', 'https://openai.com');
-    expect(openAiLink).toHaveClass('hero-highlight');
+    const gatechLink = screen.getByRole('link', { name: /georgia tech/i });
+    expect(gatechLink).toHaveAttribute('href', 'https://www.gatech.edu');
+    expect(gatechLink).toHaveClass('hero-highlight');
 
-    const promptfooLink = screen.getByRole('link', { name: /promptfoo/i });
-    expect(promptfooLink).toHaveAttribute('href', 'https://promptfoo.dev');
-    expect(promptfooLink).toHaveClass('hero-highlight');
+    const awsLink = screen.getByRole('link', { name: /aws/i });
+    expect(awsLink).toHaveAttribute('href', 'https://aws.amazon.com');
+    expect(awsLink).toHaveClass('hero-highlight');
 
-    const codexSecurityLink = screen.getByRole('link', {
-      name: 'Codex Security',
-    });
-    expect(codexSecurityLink).toHaveAttribute(
+    const meituanLink = screen.getByRole('link', { name: /meituan/i });
+    expect(meituanLink).toHaveAttribute(
       'href',
-      'https://openai.com/index/codex-security-now-in-research-preview/',
+      'https://www.meituan.com/en-US/about-us',
     );
-    expect(codexSecurityLink).toHaveClass('hero-highlight');
+    expect(meituanLink).toHaveClass('hero-highlight');
+
+    const momentaLink = screen.getByRole('link', { name: /momenta/i });
+    expect(momentaLink).toHaveAttribute('href', 'https://www.momenta.cn/en/');
+    expect(momentaLink).toHaveClass('hero-highlight');
+
+    const nusLink = screen.getByRole('link', {
+      name: /national university of singapore research institute/i,
+    });
+    expect(nusLink).toHaveAttribute('href', 'https://nus.edu.sg/');
+    expect(nusLink).toHaveClass('hero-highlight');
 
     expect(container.querySelector('.hero-tagline')).toHaveTextContent(
-      "I'm a Member of the Technical Staff at OpenAI, working on Promptfoo and Codex Security. I help secure AI systems and use AI to find software vulnerabilities. I co-founded Promptfoo before it joined OpenAI in 2026.",
+      "I'm an M.S. student in Computational Science and Engineering at Georgia Tech, focused on backend systems, distributed infrastructure, and AI. I've built production software at AWS, Meituan, Momenta, and the National University of Singapore Research Institute.",
     );
   });
 
@@ -48,11 +56,7 @@ describe('Hero', () => {
 
     expect(container.querySelector('.telemetry')).not.toBeInTheDocument();
     expect(container.querySelector('.hero-chips')).not.toBeInTheDocument();
-    expect(screen.queryByText('Countries visited')).not.toBeInTheDocument();
-    expect(screen.queryByText('Computing since')).not.toBeInTheDocument();
-    expect(screen.queryByText('Based in')).not.toBeInTheDocument();
-    expect(screen.queryByText('YC Alum')).not.toBeInTheDocument();
-    expect(screen.queryByText('Stanford ICME')).not.toBeInTheDocument();
+    expect(screen.queryByText('Georgia Tech GPA')).not.toBeInTheDocument();
   });
 
   it('renders one primary CTA and one quieter resume link', () => {

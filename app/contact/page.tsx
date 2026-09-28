@@ -23,7 +23,9 @@ export default function ContactPage() {
         <div className="contact-content">
           <div className="contact-email-block">
             <EmailLink />
-            <p className="contact-hint">Usually respond within 24 hours</p>
+            <p className="contact-hint">
+              For software engineering and collaboration inquiries
+            </p>
           </div>
 
           <div className="contact-divider">

@@ -4,13 +4,13 @@
     "height": 630
   },
   "profile": {
-    "name": "Michael D'Angelo",
-    "employer": "OpenAI",
-    "focus": "Promptfoo and Codex Security",
-    "countriesVisited": 53,
-    "computingSince": 1993,
-    "currentCity": "New York, NY"
+    "name": "Minxuan Jin",
+    "employer": "Georgia Tech",
+    "focus": "Backend Systems, Distributed Infrastructure, and AI",
+    "currentCity": "Atlanta, GA",
+    "role": "M.S. Student in Computational Science and Engineering",
+    "github": "https://github.com/thisXuan"
   },
-  "generatorDigest": "69f9406c836e1571b913cecb43e10ae4517ea8749e55735d6e3bc700fb85f241",
-  "imageDigest": "916adc2a96bbdc30d68db9b291927d346cad40e9a12ae7384f8332cd7ed882a2"
+  "generatorDigest": "0ba65a9f1b2ccad09444e51d682f405795acdeb0ed21c24ace6a7197df15a25f",
+  "imageDigest": "cd3e18309becddcde6827191047fc89e139cfec34bd85354a9cf9d1db40c5a5f"
 }
